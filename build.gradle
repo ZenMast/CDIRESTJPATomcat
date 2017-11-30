@@ -19,6 +19,12 @@ dependencies {
     /*CDI*/
     compile 'org.glassfish.jersey.ext.cdi:jersey-cdi1x:2.26'
     compile group: 'org.jboss.weld.servlet', name: 'weld-servlet-core', version: '3.0.0.Final'
+
+    /*JPA*/
+    compile 'org.hibernate:hibernate-core:5.2.12.Final'
+
+    /*Helper*/
+    compileOnly 'org.projectlombok:lombok:1.16.18'
 }
 
 war {
