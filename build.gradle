@@ -1,0 +1,26 @@
+group 'TestJerseyCDI'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    /*Required to integrate jersey with servlet container*/
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.26'
+    /*Required for jersey container servlet to work*/
+    compile 'org.glassfish.jersey.inject:jersey-hk2:2.26'
+
+    /*CDI*/
+    compile 'org.glassfish.jersey.ext.cdi:jersey-cdi1x:2.26'
+    compile group: 'org.jboss.weld.servlet', name: 'weld-servlet-core', version: '3.0.0.Final'
+}
+
+war {
+    archiveName = 'RESTCDITest.war'
+}
