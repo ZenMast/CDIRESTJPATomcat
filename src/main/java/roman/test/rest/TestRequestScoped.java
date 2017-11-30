@@ -21,6 +21,6 @@ public class TestRequestScoped {
 
         em.persist(testEntity);
 
-        return "test successful if not null & true: " + em.contains(testEntity);
+        return "test successful if not null & true: " + em.find(TestEntity.class, 1);
     }
 }

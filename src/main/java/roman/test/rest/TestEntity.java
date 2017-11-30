@@ -11,13 +11,13 @@ import lombok.Data;
 
 
 @Data
-@Entity(name = "name")
+@Entity(name = "testtable")
 public class TestEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
+    @Column(name = "name")
     private String name;
 }
